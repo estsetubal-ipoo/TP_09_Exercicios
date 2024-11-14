@@ -54,10 +54,18 @@ public class BankAccount {
      * @return true, if the operation is successful; false, otherwise
      */
     public boolean transferTo(BankAccount dest, double amount) {
+        if(amount <= 0) {
+            throw new IllegalArgumentException("Amount cannot be <= 0.");
+        }
+
         if(balance < amount) return false; // não há saldo suficiente
 
         withdraw(amount);
         dest.deposit(amount);
+
+        // ou:
+        // this.balance -= amount;
+        // dest.balance += amount;
 
         return true;
     }
