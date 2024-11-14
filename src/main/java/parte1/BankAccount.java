@@ -1,3 +1,5 @@
+package parte1;
+
 public class BankAccount {
 
     public static final String BANK_CODE = "ESTS";

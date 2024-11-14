@@ -1,3 +1,5 @@
+package parte1;
+
 public class Program {
     public static void main(String[] args) {
         BankAccount account1 = new BankAccount("Ana Gomes", "123456789");
